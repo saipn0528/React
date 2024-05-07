@@ -1,0 +1,41 @@
+Simple HTML displaying he hello world
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1>Hello World</h1>
+    </div>
+  </body>
+</html>
+
+
+This is how we create hello world in JAVASCRIPT
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const heading = document.createElement("h1");
+      //we have the headig element and how do we put heading into it
+      heading.innerHTML = "Hello world from Javascript";
+
+      //now pass the heading to the root for thaat we need to find the root
+      //how to find the root
+      const root = document.getElementById("root");
+      // now how to pass the heading to root there is a method called APPEDN CHILD
+      root.appendChild(heading);
+    </script>
+  </body>
+</html>
