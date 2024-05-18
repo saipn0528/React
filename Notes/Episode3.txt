@@ -1,0 +1,25 @@
+// jsk is not  writting html in javascript , it is like html like syntax.(it lookss like html)
+//browser will not understand this so the parcel transpile the the jsx code in a way that it can be undestand by the browser.
+//JSX => React.createElement => ReacrElement(JS OBJECT) => when rendered => HTML Element
+//babel is the one which converts jsx into react.createelement
+
+//React Element
+const jsxheading = (
+<h1 className="head">
+  hello this is from jsx
+  </h1>);
+
+
+Reaact components are of two types
+1)class based components(Old Way)- uses javascript classes 
+2) functional components(new way) - uses javascript functions 
+
+
+const HeadingComponent = ()=>{
+    return <h1 className="heading"> This is from functional component </h1>;
+};
+
+            our
+comst HeadingComponent = () => (
+    <h1 className="heading"> This is from functional component </h1>;
+);

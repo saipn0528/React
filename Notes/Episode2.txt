@@ -1,0 +1,4 @@
+When ever we cret a react app with npx create-react-app my-react-app
+this will give you the production ready code ,But in this episode we are going to learn how we make ourr code producation ready. 
+
+it shows how can we make a own producation ready rect application with out using the creat react command.

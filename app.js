@@ -1,36 +1,29 @@
-/*const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Hello World this from React"
-);*/
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-/*
-Below is the code for the nested tags in html like
+// jsk is not  writting html in javascript , it is like html like syntax.(it lookss like html)
+//browser will not understand this so the parcel transpile the the jsx code in a way that it can be undestand by the browser.
+//JSX => React.createElement => ReacrElement(JS OBJECT) => when rendered => HTML Element
+//babel is the one which converts jsx into react.createelement
 
-<div id="parent">
-    <div id= "child">
-        <h1>"i am h1 tag"</h1>
-        <h2>"i am h2"</h2>
-    </div>
-</div>
+//React Element
+const jsxheading = <h1 className="head">hello this is from jsx</h1>;
 
+//React  Functional Component => just a javascript function.
 
-if you want to pass the two heading we need to pass them as array 
-*/
-// The parent is the react element which is nothing but the javascript object.
-// ReactElement(object) => HTML (Browser understandable)
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "I am H1 tag"),
-    React.createElement("h2", {}, "I am H2 tag"),
-  ])
+const HeadingComponent = () => (
+  <div id="continer">
+    <h1>Hello I am from the React Functional Component</h1>
+  </div>
 );
-//The above thing is not an  h1 element it is a react element
-
-console.log(parent); // this willreturn the object
+//component inside a component is called the component composition.
+const HeadingComponent1 = () => (
+  <div>
+    <HeadingComponent />
+    <h1 className="head">hello i am using in functional component</h1>
+  </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// while the above parent object rendering onto the dom that object is converted into the HTML and puts into the dom.
-root.render(parent); // this take the object and convert into heading tag and puting into the browser.
+
+root.render(<HeadingComponent1 />);
